@@ -1,0 +1,42 @@
+version: "3.3"
+services:
+    #Database
+    database: 
+        image: mysql:latest
+        volumes:
+            - './sql:/docker-entrypoint-initdb.d'
+            - './db_data:/var/lib/mysql'
+        restart: always
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: paikroot
+            MYSQL_DATABASE: paik
+            MYSQL_USER: paik
+            MYSQL_PASSWORD: adminpaik
+    #Wordpress
+    wordpress:
+        depends_on:
+            - database
+        image: wordpress:latest
+        volumes:
+            - "./html:/var/www/html"
+        restart: always
+        ports:
+            - "80:80"
+        environment:
+            WORDPRESS_DB_HOST: database:3306
+            WORDPRESS_DB_USER: paik
+            WORDPRESS_DB_PASSWORD: adminpaik
+            WORDPRESS_DB_NAME: paik
+    #PHPMyAdminnn
+    phpmyadmin:
+        depends_on:
+            - database
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        restart: always
+        ports:
+            - '81:80'
+        environment:
+            PMA_HOST: database
