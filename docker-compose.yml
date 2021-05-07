@@ -1,42 +1,33 @@
-version: "3.3"
+  
+version: '3'
 services:
-    #Database
-    database: 
-        image: mysql:latest
-        volumes:
-            - './sql:/docker-entrypoint-initdb.d'
-            - './db_data:/var/lib/mysql'
-        restart: always
-        ports:
-            - "3306:3306"
-        environment:
-            MYSQL_ROOT_PASSWORD: paikroot
-            MYSQL_DATABASE: paik
-            MYSQL_USER: paik
-            MYSQL_PASSWORD: adminpaik
-    #Wordpress
-    wordpress:
-        depends_on:
-            - database
-        image: wordpress:latest
-        volumes:
-            - "./html:/var/www/html"
-        restart: always
-        ports:
-            - "80:80"
-        environment:
-            WORDPRESS_DB_HOST: database:3306
-            WORDPRESS_DB_USER: paik
-            WORDPRESS_DB_PASSWORD: adminpaik
-            WORDPRESS_DB_NAME: paik
-    #PHPMyAdminnn
-    phpmyadmin:
-        depends_on:
-            - database
-        image: phpmyadmin/phpmyadmin
-        container_name: phpmyadmin
-        restart: always
-        ports:
-            - '81:80'
-        environment:
-            PMA_HOST: database
+  #app:
+    #container_name: node
+    #build: .
+    #ports:
+     # - '3000:3000'
+    #external_links:
+     # - mongo
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+    volumes:
+      - './db:/docker-entrypoint-initdb.d'
+      - './mongobase:/data/db'
+    environment:
+#      MONGO_INITDB_ROOT_USERNAME: root
+#      MONGO_INITDB_ROOT_PASSWORD: hola
+      MONGO_INITDB_DATABASE: paik
+  mongo-express:
+    image: mongo-express:latest
+    container_name: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+#    environment:
+#     ME_CONFIG_MONGODB_ADMINUSERNAME: root
+#      ME_CONFIG_MONGODB_ADMINPASSWORD: hola
+    depends_on:
+      - mongo

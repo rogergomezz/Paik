@@ -1,0 +1,19 @@
+{
+  "name": "paik",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogergomezz/Paik.git"
+  },
+  "author": "Roger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rogergomezz/Paik/issues"
+  },
+  "homepage": "https://github.com/rogergomezz/Paik#readme"
+}
