@@ -6,10 +6,10 @@ router.get("/dashboard", (req, res) => {
 });
 
 router.get("/", (req, res) => {
-  res.render("restaurants");
+  res.render("coches");
 });
 
-router.get("/restaurants", (req, res) => {
-  res.render("restaurants");
+router.get("/coches", (req, res) => {
+  res.render("coches");
 });
 module.exports = router;
