@@ -1,4 +1,4 @@
-db.cars.insertMany(
+db.coches.insertMany(
     [{
             marca: 'Seat',
             modelo: 'Leon FR',
@@ -113,9 +113,10 @@ db.cars.insertMany(
             },
         },
     ]
-),
+ )
 
-db.users.insert({
+
+/*db.users.insert({
     googleId: 110296827098430592941,
     displayName: 'Daniel Mas Carré',
     firstName: 'Daniel',
@@ -138,4 +139,4 @@ firstName: 'Ivan',
 lastName: 'Mas Carre',
 image: 'https://lh3.googleusercontent.com/a-/AOh14GipuM0tl3M3XI-PBeL5kg3IIjG5ruCBF5ywrUW4=s96-c',
 admin: true
-})
+}) */
