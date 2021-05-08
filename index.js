@@ -5,6 +5,14 @@ const port = process.env.PORT || 3000;
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
+const dotenv = require('dotenv')
+const mongoose = require('mongoose')
+const connectDB = require('./config/db')
+
+// Load config
+dotenv.config({ path: './config/config.env' })
+
+connectDB()
 
 // Handlebars
 
@@ -33,4 +41,4 @@ app.listen(port, hostname, () => {
   console.log("Server started on port " + port);
 });
 
-// boostrap
+
