@@ -23,4 +23,9 @@ router.get("/", async(req, res) => {
 router.get("/coches", (req, res) => {
   res.render("coches");
 });
+
+router.get("/about", (req, res) => {
+  res.render("about");
+});
+
 module.exports = router;
