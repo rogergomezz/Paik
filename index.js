@@ -42,3 +42,7 @@ app.listen(port, hostname, () => {
 });
 
 
+app.use(function(req, res, next) {
+  res.locals.coches = req.coches || null
+  next()
+})

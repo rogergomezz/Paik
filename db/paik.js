@@ -37,7 +37,7 @@ db.coches.insertMany(
             },
         },
         {
-            marca: 'Volkawagen',
+            marca: 'Volkswagen',
             modelo: 'Golf R',
             descripcion: "Coche de alta gama de ambito deportivo",
             img: "https://autoproyecto.com/wp-content/uploads/2020/11/2022_Golf_R_European_model_shown-12437.jpg",
