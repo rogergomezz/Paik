@@ -33,4 +33,21 @@ router.get("/contact", async(req, res) => {
 
 });
 
+router.get("/login", (req, res) => {
+  res.render("login");
+});
+
+router.get('/:_id', async(req, res) => {
+  try {
+      const coche = await Coches.findById(req.params._id).lean()
+      res.render('coche', {
+          coche
+      })
+      console.log(coche)
+  } catch (err) {
+      console.error(err)
+      res.render('error/500')
+  }
+})
+
 module.exports = router;

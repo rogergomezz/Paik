@@ -28,7 +28,7 @@ app.use(express.static(__dirname+'/public'));
 
 // Routes
 app.use("/", require("./routes/index"));
-
+app.use("/coche", require("./routes/index"));
 
 
 /*const server = http.createServer((req, res) => {
