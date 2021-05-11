@@ -2,9 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Coches = require('../models/coches');
 
-router.get("/dashboard", (req, res) => {
-  res.render("dashboard");
-});
+
 
 router.get("/", async(req, res) => {
     try {
