@@ -37,6 +37,10 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/registration", (req, res) => {
+  res.render("registration");
+});
+
 router.get('/:_id', async(req, res) => {
   try {
       const coche = await Coches.findById(req.params._id).lean()
