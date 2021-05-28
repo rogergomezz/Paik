@@ -40,7 +40,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // Images
 app.use(express.static(__dirname+'/public'));
-
 //middlewares
 
 app.use(morgan("dev"));

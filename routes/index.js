@@ -1,4 +1,5 @@
 const express = require("express");
+const { isAuthenticated } = require("../helpers/auth");
 const router = express.Router();
 const Coches = require('../models/coches');
 
@@ -29,6 +30,18 @@ router.get("/about", (req, res) => {
 router.get("/contact", async(req, res) => {
   res.render("contact")
 
+});
+router.get("/admin", isAuthenticated, async(req, res) => {
+  res.render('admin/admin', {
+    layout: 'back',})
+});
+router.get("/tables", isAuthenticated, async(req, res) => {
+  res.render('admin/tables', {
+    layout: 'back',})
+});
+router.get("/charts", isAuthenticated, async(req, res) => {
+  res.render('admin/charts', {
+    layout: 'back',})
 });
 
 
