@@ -43,6 +43,10 @@ router.get("/charts", isAuthenticated, async(req, res) => {
   res.render('admin/charts', {
     layout: 'back',})
 });
+router.get("/add", isAuthenticated, async(req, res) => {
+  res.render('admin/add', {
+    layout: 'back',})
+});
 
 
 router.get('/coche/:_id', async(req, res) => {
