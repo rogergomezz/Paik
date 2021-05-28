@@ -9,28 +9,23 @@
                             <h3 class="login-heading mb-4 text-center">Regístrate ahora</h3>
                             <form action="/users/signup" method="POST">
                                 <div class="form-label-group">
-                                    <input type="text" id="nombre" class="form-control" placeholder="Nombre" required
+                                    <input type="text" name="name" id="nombre" class="form-control" placeholder="Nombre" required
                                         autofocus>
                                     <label for="nombre">Nombre</label>
                                 </div>
                                 <div class="form-label-group">
-                                    <input type="text" id="nombre" class="form-control" placeholder="Nombre" required
-                                        autofocus>
-                                    <label for="nombre">Apellido</label>
-                                </div>
-                                <div class="form-label-group">
-                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address"
                                         required autofocus>
                                     <label for="inputEmail">Correo electrónico</label>
                                 </div>
 
                                 <div class="form-label-group">
-                                    <input type="password" id="inputPassword" class="form-control"
+                                    <input type="password" name="password" id="inputPassword" class="form-control"
                                         placeholder="Password" required>
                                     <label for="inputPassword">Contraseña</label>
                                 </div>
                                 <div class="form-label-group">
-                                    <input type="password" id="inputPassword" class="form-control"
+                                    <input type="password" name="confirm_password" id="inputconfirm_password" class="form-control"
                                         placeholder="Password" required>
                                     <label for="inputPassword">Repetir contraseña</label>
                                 </div>
@@ -38,9 +33,6 @@
                                 <button
                                     class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
                                     type="submit">Crear cuenta</button>
-                                <div class="text-center">
-                                    <a class="small" href="#">¿Olvidaste la contraseña?</a>
-                                </div>
                             </form>
                         </div>
                     </div>
