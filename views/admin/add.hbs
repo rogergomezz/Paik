@@ -6,69 +6,74 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-3">
-            <form id="contact-form" class="form" action="#" method="POST" role="form">
+            <form id="contact-form" class="form" action="/" method="POST" role="form">
                 <div class="form-group">
-                    <label class="form-label" for="name">Marca</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Your name" tabindex="1"
+                    <label class="form-label" for="Marca">Marca</label>
+                    <input type="text" class="form-control" id="marca" name="marca" placeholder="Marca" tabindex="1"
                         required>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="email">Modelo</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
-                        tabindex="2" required>
+                    <input type="text" class="form-control" id="modelo" name="modelo" placeholder="Modelo" tabindex="2"
+                        required>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="subject">Imagen</label>
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
-                        tabindex="3">
+                    <input type="url" class="form-control" id="img" name="img" placeholder="Imagen" tabindex="3">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="subject">Imagen 2</label>
+                    <input type="url" class="form-control" id="img" name="img2" placeholder="Imagen" tabindex="3">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="subject">Imagen 3</label>
+                    <input type="url" class="form-control" id="img" name="img3" placeholder="Imagen" tabindex="3">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="subject">Precio</label>
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
-                        tabindex="3">
+                    <input type="text" class="form-control" id="precio" name="precio" placeholder="Precio" tabindex="3">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="subject">Precio Rebajado</label>
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
-                        tabindex="3">
+                    <input type="text" class="form-control" id="precioRebajado" name="precioRebajado"
+                        placeholder="Precio Rebajado" tabindex="3">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="subject">Ahorro</label>
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
-                        tabindex="3">
+                    <input type="text" class="form-control" id="Ahorro" name="Ahorro" placeholder="Ahorro" tabindex="3">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="subject">Potencia</label>
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
+                    <input type="text" class="form-control" id="potencia" name="coche.potencia" placeholder="Potencia"
                         tabindex="3">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="subject">Color</label>
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
+                    <input type="text" class="form-control" id="color" name="coche.color" placeholder="Color"
                         tabindex="3">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="subject">Kilometros</label>
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
-                        tabindex="3">
+                    <input type="text" class="form-control" id="kilometros" name="coche.kilometros"
+                        placeholder="Kilometros" tabindex="3">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="subject">Cambio De Marchas</label>
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
-                        tabindex="3">
+                    <input type="text" class="form-control" id="marchas" name="coche.marchas"
+                        placeholder="Cambio de Marchas" tabindex="3">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="subject">Consumo Medio</label>
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
-                        tabindex="3">
+                    <input type="text" class="form-control" id="consumoMedio" name="consumo.media"
+                        placeholder="Consumo Medio" tabindex="3">
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="message">Descripcion</label>
-                    <textarea rows="5" cols="50" name="message" class="form-control" id="message"
+                    <label class="form-label" for="descripcion">Descripcion</label>
+                    <textarea rows="5" cols="50" name="descripcion" class="form-control" id="descripcion"
                         placeholder="Message..." tabindex="4" required></textarea>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-start-order ">Send Message</button>
+                    <button type="submit" class="btn btn-start-order ">Añadir Coche</button>
                 </div>
             </form>
         </div>

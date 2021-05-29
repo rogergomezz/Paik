@@ -33,11 +33,20 @@ router.get("/contact", async(req, res) => {
 });
 router.get("/admin", isAuthenticated, async(req, res) => {
   res.render('admin/admin', {
-    layout: 'back',})
+    layout: 'back',
+  })
 });
 router.get("/tables", isAuthenticated, async(req, res) => {
-  res.render('admin/tables', {
-    layout: 'back',})
+  try {
+    const coches = await Coches.find({}).lean()
+    res.render('admin/tables', {
+        layout: 'back',
+        coches,
+    })
+} catch (err) {
+    console.error(err)
+    res.render('/error/500')
+}
 });
 router.get("/charts", isAuthenticated, async(req, res) => {
   res.render('admin/charts', {
@@ -56,6 +65,19 @@ router.get('/coche/:_id', async(req, res) => {
           coche
       })
       console.log(coche)
+  } catch (err) {
+      console.error(err)
+      res.render('error/500')
+  }
+})
+
+
+router.post('/', isAuthenticated, async(req, res) => {
+  try {
+      
+      await Coches.create(req.body)
+      res.redirect('/admin')
+
   } catch (err) {
       console.error(err)
       res.render('error/500')

@@ -17,21 +17,31 @@ const cochesSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    img2: {
+        type: String,
+        required: true
+    },
+    img3: {
+        type: String,
+        required: true
+    },
     coche: {
         type: Object,
         required: true
     },
     extras: {
         type: Object,
-        required: true
     },
     precio: {
         type: String,
         required: true
     },
-    fechaFabricacion: {
+    precioRebajado: {
         type: String,
         required: true
+    },
+    fechaFabricacion: {
+        type: String,
     },
     consumo: {
         type: Object,
@@ -39,7 +49,6 @@ const cochesSchema = new mongoose.Schema({
     },
     contact: {
         type: Object,
-        required: true
     },
 })
 
